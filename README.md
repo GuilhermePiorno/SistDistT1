@@ -1,15 +1,30 @@
 # SistDistT1
 
 ## Ambiente Virtual
+Criando ambiente virtual.
+```
+python -m venv venv
+```
 
 Ativar ambiente.
+Linux:
 ```
 source venv/bin/activate
+```
+
+Windows:
+```
+.\venv\Scripts\activate
 ```
 
 Sair do ambiente:
 ```
 deactivate
+```
+
+## Instalação do RPyC:
+```
+pip install rpyc
 ```
 
 ## Execução do servidor:
