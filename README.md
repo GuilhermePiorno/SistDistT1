@@ -7,12 +7,12 @@ python -m venv venv
 ```
 
 Ativar ambiente.
-Linux:
+* Linux:
 ```
 source venv/bin/activate
 ```
 
-Windows:
+* Windows:
 ```
 .\venv\Scripts\activate
 ```
@@ -34,11 +34,10 @@ pyhton3 server.py
 
 ## Execução do cliente:
 ```
-python3 cliente.py 0.0.0.0
+python3 cliente.py 'localhost'
 ```
-
-ou
+ou (linux only):
 
 ```
-python3 cliente.py localhost
+python3 cliente.py '0.0.0.0'
 ```
