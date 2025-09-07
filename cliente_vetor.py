@@ -1,0 +1,26 @@
+import rpyc
+import sys
+import random
+import time
+
+start = time.time()
+if len(sys.argv) < 2:
+    exit("Usage {} SERVER".format(sys.argv[0]))
+
+server = sys.argv[1]
+
+tam = int(sys.argv[2])
+vet = [random.randint(0, 99) for _ in range(tam)]
+
+c = rpyc.connect(server,18861)
+
+sum = c.root.get_sum(vet)
+
+end = time.time()
+tempo = end - start
+
+# print("sum: " + str(sum))
+print(end-start)
+with open("output-cliente.txt", "a") as my_file:
+    # my_file.write(str(sum)+"\n")
+    my_file.write(str(tempo)+"\n")
