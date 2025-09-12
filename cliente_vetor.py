@@ -13,6 +13,7 @@ tam = int(sys.argv[2])
 vet = [random.randint(0, 99) for _ in range(tam)]
 
 c = rpyc.connect(server, 18861)
+c._config['sync_request_timeout'] = None
 
 sum = c.root.get_sum(vet)
 
