@@ -23,4 +23,3 @@ with open("output_cliente.txt", "a") as my_file:
 print(p1)
 print(p2)
 print(p3)
-print(p3)
