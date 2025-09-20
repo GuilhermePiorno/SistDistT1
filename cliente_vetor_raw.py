@@ -7,6 +7,11 @@ start = time.time()
 if len(sys.argv) < 2:
     exit("Usage {} SERVER".format(sys.argv[0]))
 
+output_name = "cliente_"
+suffix = str(sys.argv[2])
+output_name += suffix
+output_name += ".txt"
+
 server = sys.argv[1]
 
 tam = int(sys.argv[2])
@@ -21,9 +26,7 @@ sum = c.root.get_sum(raw_data)
 end = time.time()
 tempo = end - start
 
-# print("sum: " + str(sum))
 print(end - start)
-with open("output_cliente_vetor.txt", "a") as my_file:
-    # my_file.write(str(sum)+"\n")
+with open(output_name, "a") as my_file:
     my_file.write(str(tempo) + "\n")
 

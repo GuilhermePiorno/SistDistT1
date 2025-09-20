@@ -9,4 +9,4 @@ tam = sys.argv[2]
 n = int(sys.argv[3])
 
 for _ in range(n):
-    subprocess.run(["python3", "cliente_vetor.py", server, tam])
+    subprocess.run(["python3", "cliente_vetor_raw.py", server, tam])
