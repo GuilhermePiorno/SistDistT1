@@ -1,7 +1,6 @@
 import rpyc
 import time
 
-
 class MyService(rpyc.Service):
     def on_connect(self, conn):
         # código que é executado quando uma conexão é iniciada, caso seja necessário
