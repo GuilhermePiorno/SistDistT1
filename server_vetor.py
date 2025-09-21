@@ -21,7 +21,7 @@ class MyService(rpyc.Service):
         tempo = end - start
         print(tempo)
 
-        with open("output_server_vetor.txt", "a") as my_file:
+        with open("server_vetor_10000.txt", "a") as my_file:
             my_file.write(str(tempo) + "\n")
         return s
 
